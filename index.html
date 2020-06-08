@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multiplayer Pong</title>
+</head>
+<body>
+    <header>
+        <h1>Multiplayer Pong</h1>
+    </header>
+
+    <div id="description">
+        <p>The first player to reach 5 points wins. The bottom controls are right and left arrow keys. The top controls are A and D keys.</p>
+    </div>
+    
+    <div id="canvas-div">
+      
+      <div id="top-start-pause-div">
+           <button class="start"><i class="fa fa-play" aria-hidden="true"></i></button><button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+       </div>
+      
+       <button class="onScreenBtn"  ontouchstart="keyTouchStartHandler(65)" ontouchend="keyTouchEndHandler(65)">
+       <i class="fa fa-arrow-left"style="width:50px"></i> 
+        </button>
+           <button  class="onScreenBtn" ontouchstart="keyTouchStartHandler(68)" ontouchend="keyTouchEndHandler(68)"> 
+            <i class="fa fa-arrow-right"style="width:50px"></i>
+            </button>
+           <br/>
+
+           <div id="score-div">
+            <span id="top" >Top : <span class="top-score"></span></span>
+            <span id="bottom">Bottom : <span class="bottom-score"></span></span>
+           </div>
+
+        <span id="top" class="mobile-score">Top : <span class="top-score"></span></span><br/>
+      
+        <canvas id="canvas" width="400px" height="400px"></canvas>
+        <br/>
+        
+        <span id="bottom" class="mobile-score">Bottom : <span class="bottom-score"></span></span>
+        <br/>
+        
+        <button  class="onScreenBtn"  ontouchstart="keyTouchStartHandler(37)" ontouchend="keyTouchEndHandler(37)">  <i class="fa fa-arrow-left"style="width:50px"></i>  </button>
+        <button  class="onScreenBtn"  ontouchstart="keyTouchStartHandler(39)" ontouchend="keyTouchEndHandler(39)">  <i class="fa fa-arrow-right"style="width:50px"></i>  </button>
+        <br/>
+        <div id="start-pause-div">
+        <button class="start"><i class="fa fa-play" aria-hidden="true"></i></button><button class="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+        </div>
+    </div>
+
+<footer><span>&copy 66baphomet</span></footer>
+    
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
